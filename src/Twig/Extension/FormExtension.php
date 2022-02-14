@@ -9,23 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace SC\DatetimepickerBundle\Twig\Extension;
+namespace App\STI\DatetimepickerBundle\Twig\Extension;
 
 use Symfony\Component\Form\FormRenderer;
 use Symfony\Component\Form\FormView;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
+use Symfony\Bridge\Twig\Node\SearchAndRenderBlockNode;
 
 /**
  * FormExtension extends Twig with form capabilities.
  *
  * @author Olivier Chauvel <olivier@generation-multiple.com>
  */
-class FormExtension extends \Twig_Extension
+class FormExtension extends AbstractExtension
 {
     /**
      * This property is public so that it can be accessed directly from compiled
      * templates without having to call a getter, which slightly decreases performance.
      *
-     * @var \Symfony\Component\Form\FormRenderer
+     * @var FormRenderer
      */
     public $renderer;
 
@@ -40,8 +43,8 @@ class FormExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('form_javascript', array($this, 'renderJavascript'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('form_stylesheet', null, array('node_class' => 'Symfony\Bridge\Twig\Node\SearchAndRenderBlockNode', 'is_safe' => array('html'))),
+            new TwigFunction('form_javascript', array($this, 'renderJavascript'), array('is_safe' => array('html'))),
+            new TwigFunction('form_stylesheet', null, array('node_class' => SearchAndRenderBlockNode::class, 'is_safe' => array('html'))),
         );
     }
 

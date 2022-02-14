@@ -23,6 +23,24 @@
     },
     "require": {
         "symfony/framework-bundle": "^6.0",
-        "symfony/form": "^6.0"
+        "symfony/form": "^6.0",
+        "symfony/twig-bundle": "^6.0",
+        "twig/extra-bundle": "^3.3",
+        "symfony/asset": "^6.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.0"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
     }
 }

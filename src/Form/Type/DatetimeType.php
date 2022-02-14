@@ -91,6 +91,10 @@ class DatetimeType extends AbstractType
                 'format' => function (Options $options, $value) use ($configs) {
                     $pickerOptions = array_merge($configs, $options['pickerOptions']);
 
+                    if(!isset($pickerOptions['formatter'])){
+                        $pickerOptions['formatter'] = 'js';
+                    }
+
                     if ($pickerOptions['formatter'] == 'php'){
                         if (isset($pickerOptions['format'])){
                             return $pickerOptions['format'];
