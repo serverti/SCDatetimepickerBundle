@@ -1,8 +1,7 @@
 #DatetimepickerBundle
 
-This bundle implements the [Bootstrap DateTime Picker](https://github.com/smalot/bootstrap-datetimepicker) in a Form Type for Symfony 3. The bundle structure is inspired by GenemuFormBundle.
+This bundle implements the [Bootstrap DateTime Picker](https://github.com/smalot/bootstrap-datetimepicker) in a Form Type for Symfony 6. The bundle structure is inspired by GenemuFormBundle.
 
-Demo : http://www.malot.fr/bootstrap-datetimepicker/demo.php
 
 Please feel free to contribute, to fork, to send merge request and to create ticket.
 
@@ -11,23 +10,10 @@ Please feel free to contribute, to fork, to send merge request and to create tic
 ### Step 1: Install DatetimepickerBundle
 
 ```bash
-php composer.phar require mwsimple/scdatetimepicker-bundle
+php composer.phar require serverti/scdatetimepicker-bundle
 ```
 
 ### Step 2: Enable the bundle
-
-``` php
-<?php
-// app/AppKernel.php
-
-public function registerBundles()
-{
-    $bundles = array(
-        // ...
-        new SC\DatetimepickerBundle\SCDatetimepickerBundle(),
-    );
-}
-```
 
 ``` yml
 # app/config/config.yml
@@ -110,10 +96,6 @@ This allows better integration of web pages.
     </form>
 {% endblock %}
 ```
-
-## Documentation
-
-The documentation of the datetime picker is here : http://www.malot.fr/bootstrap-datetimepicker/#options
 
 ## Notes
 
