@@ -5,7 +5,8 @@
 /php-cs-fixer.phar
 /vendor
 /nbproject
-/Resources/doc/generated
+/src/Resources/doc/generated
+/.idea/
 
 *.tmp
 *.patch
@@ -15,8 +16,10 @@
 *.DS_Store
 .#*
 
+
 phpunit.xml
 
 .vagrant
 Vagrantfile
 
+/.idea/

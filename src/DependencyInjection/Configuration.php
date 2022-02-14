@@ -1,6 +1,6 @@
 <?php
 
-namespace SC\DatetimepickerBundle\DependencyInjection;
+namespace App\STI\DatetimepickerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

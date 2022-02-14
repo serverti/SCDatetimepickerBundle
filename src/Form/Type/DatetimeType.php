@@ -9,7 +9,7 @@
 * file that was distributed with this source code.
 */
 
-namespace SC\DatetimepickerBundle\Form\Type;
+namespace App\STI\DatetimepickerBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormInterface;
@@ -18,8 +18,8 @@ use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
-* DatetimeType
-*
+ * DatetimeType
+ *
 */
 class DatetimeType extends AbstractType
 {

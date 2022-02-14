@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace SC\DatetimepickerBundle\DependencyInjection\Compiler;
+namespace App\STI\DatetimepickerBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
